@@ -19,7 +19,7 @@ def LS(x,y,o):
     def P(z):                       # Construct the polynomial to return
         S = a[o-1] + a[o]*z   # Use Horner's algorithm so that P(x) is computed in O(o) time (see Lec 9, slide 13).
         for k in range(o-2,-1,-1):
-            S = a[k][0] + S * z
+            S = a[k] + S * z
         return S
     return P, a
  
